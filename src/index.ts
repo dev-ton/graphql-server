@@ -44,7 +44,6 @@ neo4jGraphQL.getSchema().then((schema) => {
     });
 
     // server.start()
-
     // Start ApolloServer
     server.listen().then(({ url }) => {
       console.log(`GraphQL server ready at ${url}`);
