@@ -34,7 +34,7 @@ const neo4jGraphQL = new Neo4jGraphQL({
   driver
 });
 
-
+const startApolloServer = async () => {
 neo4jGraphQL.getSchema().then((schema) => {
     // Create ApolloServer instance to serve GraphQL schema
     const server = new ApolloServer({
@@ -50,11 +50,11 @@ neo4jGraphQL.getSchema().then((schema) => {
       console.log(`GraphQL server ready at ${url}`);
     });
   })
+}
 
-// const startApolloServer = async () => {
 
-// startApolloServer();
 
-// export default server;
+
+export default startApolloServer;
 
 //TODO: update to Apollo V4, based on: https://neo4j.com/docs/graphql-manual/current/
